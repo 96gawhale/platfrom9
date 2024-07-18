@@ -5,7 +5,11 @@ run the start.sh script to start the servers
 run each main.go file
 	eg: go run main.go
 -------------------------------------------------------------------------------
-afte starting the servers go to your web browser and run http://localhost:8080
+after starting the servers go to your web browser and
+
+For main page: run http://localhost:8080
+For main cal: run http://localhost:8081
+For main todo list: run http://localhost:8082
 -------------------------------------------------------------------------------
 to end servers:
 to stop the servers run the stop script
