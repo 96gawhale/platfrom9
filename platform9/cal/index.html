@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        input {
+            font: inherit;
+            padding: 0.2em 0.5em;
+        }
+        select{
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <ul class="squares">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <section>
+        <h1>Simple Calculator</h1>
+        <form id="calc-form" class="m-30">
+            <div>
+                <input type="number" id="operand1" placeholder="Operand 1" required>
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="number" id="operand2" placeholder="Operand 2" required>
+            </div>
+            
+            <button class="custom-btn btn-8 m-30" type="submit">Calculate</button>
+        </form>
+        <h2 class="m-30">Result: <span id="result"></span></h2>
+        <h3 id="error" style="color: red;"></h3>
+    </section>
+    
+
+    <script>
+        document.getElementById('calc-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const operand1 = parseFloat(document.getElementById('operand1').value);
+            const operand2 = parseFloat(document.getElementById('operand2').value);
+            const operator = document.getElementById('operator').value;
+
+            const response = await fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    operand1: operand1,
+                    operand2: operand2,
+                    operator: operator
+                })
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                document.getElementById('error').textContent = result.error;
+                document.getElementById('result').textContent = '';
+            } else {
+                document.getElementById('error').textContent = '';
+                document.getElementById('result').textContent = result.result;
+            }
+        });
+    </script>
+</body>
+</html>
+

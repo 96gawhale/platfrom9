@@ -1,0 +1,13 @@
+To start servers:
+run the start.sh script to start the servers
+	eg: ./start.sh
+		OR
+run each main.go file
+	eg: go run main.go
+-------------------------------------------------------------------------------
+afte starting the servers go to your web browser and run http://localhost:8080
+-------------------------------------------------------------------------------
+to end servers:
+to stop the servers run the stop script
+	eg: ./stop
+--------------------------------------------------------------------------------

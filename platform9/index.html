@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="area">
+        <ul class="squares">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <section>
+        <h1>Main Site</h1>
+        <div class="buttons">
+            <button class="custom-btn btn-8" onclick="redirectToCal()">Calculator</button>
+            <button class="custom-btn btn-8" onclick="redirectToTodo()">Todo List</button>
+        </div>
+        
+    </section>
+    
+    
+    <script>
+        function redirectToCal() {
+            window.location.href = "/cal";
+        }
+
+        function redirectToTodo() {
+            window.location.href = "/todo";
+        }
+    </script>
+</body>
+</html>
+
