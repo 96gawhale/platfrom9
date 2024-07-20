@@ -1,0 +1,34 @@
+VM Challenge:
+
+-On the installation part of Virtualbox on windows. It was plain and simple.
+-Fist  download the virtualbox executable file from their original website.
+-After the download is finished run the file.
+-Click on the 'New' button a screen will pop up. 
+-Fill in the required details such as how much RAM,Cores,Space your VM requires.
+-After finishing all these steps you will find your machine on the left side of the window but all is not done as you have not yet provided an iso file.
+-Click on you VM and go to 'Setting' -> go to storage -> in controller -> click on the disk icon and add your iso file, save and colse the setting window.
+-You can also change you VM setting such as core, RAM.
+-Then you can just click on 'Start' and your VM will start. Do the boot up rituals and you are good to go.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Also, I have tried the qemu thing . Ran a text based debain during my project.
+-So to tell in short.
+-First you need to create an disk file which is you memory on which your machine will run.
+-Then comes running the installer using the iso file you have downloded.
+-After finishing the installation you don't need the iso anymore just boot the qcow file or the dist file you have created.
+-You can find all these commands on the website but I find the OpenBSD instruction clear and easy to follow. 
+
+====================================================================================================================================================================================
+Coding Challangr:
+
+-I have tried using go as I have not done much of web development. 
+-Was very superised to see that go had a built in web server.
+-The language was kind of simple and not too complicated to understand but it took me a lot of time to figure out how to use the database.
+
+
+====================================================================================================================================================================================
+Learning Basic:
+
+-Started reading basics of docker like what is a docker, advantages, how to use it,etc.
+-On the linux part haven't done much was just reading docker as, I have some basic understanding of linux because I have been using linux as a primary machine for more than a year now.
+
